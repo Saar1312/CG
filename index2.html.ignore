@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Prueba </title>
+</head>
+<body>
+	<div id="div1">
+		<form action="/action_page.php">
+			First name: <input id="input1" type="text" name="FirstName"><br>
+		</form>
+	</div>
+	<script>
+		var div_element = document.getElementById('input1');
+		var keyListener = function( event )
+		{
+			var key = event.key;
+			
+			if (key == "ArrowLeft" || key == "Left"){
+				div_element.style.backgroundColor = "red"
+			}
+
+			else if (key == "ArrowRight" || key == "Right"){
+				alert(key);
+			}
+			
+			else if (key == "ArrowDown" || key == "Down"){
+				alert(key);
+			}
+			
+			else if (key == "ArrowUp" || key == "Up"){
+				alert(key);
+			}
+		}
+
+		document.addEventListener('keydown', keyListener );
+
+	</script>
+</body>
+</html>
